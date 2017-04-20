@@ -1,0 +1,198 @@
+Ограничить вводимые параметры везде: либо эксепшены, либо просьба ввести еще раз.
+Запрещать подключать услуги, если денег не достаточно.
+Запрещать отправлять ордеры на инстансы с незавершенными изменениями и т. п.
+Форматирование подправить - есть косяки с пробелами и "энтерами".
+Реализовать XML сохранение.
+Оформить регулярное сообщение "Введите "хелп" чтобы увидеть список команд. Ввеите "хелп <команда>" чтобы получить подробное описание команды".
+    можно оформить его, чтобы он вылезал только при некорректных командах.
+Сделать краткий хелп по всем командам вместе.
+Сделать хелп по каждой команде в отдельности.
+В таких командах как "Закончить выполнение ордера" ид эмплоя должен вводиться автоматически (либо корректировать код, либо,
+    если там все нормально, откорректировать вывод вида команд в хелпе).
+
+Смотрим вывод, подмечаем косяки:
+/*
+
+
+
+Enter your ID: 0
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+1
+
+
+
+
+No connection services
+Enter any symbol for return to main menu.
+1
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+2
+
+
+
+
+
+Internet50
+   Speed: 50, Limit: 10, Cost: 350
+Internet100
+   Speed: 100, Limit: 30, Cost: 650
+InternetVIP
+   Speed: 175, Limit: not limited, Cost: 990
+
+Enter any symbol for return to main menu.
+1
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+3
+
+
+
+
+Choice new service:
+1) Internet50
+   Speed: 50, Limit: 10, Cost: 350
+2) Internet100
+   Speed: 100, Limit: 30, Cost: 650
+3) InternetVIP
+   Speed: 175, Limit: not limited, Cost: 990
+1
+Request sent to review
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+4
+
+
+
+
+Enter your ID: 1
+Employee: Roman Khrapko
+insert command
+help
+see_not_started_orders
+see_all_orders
+see_all_instances
+exit
+employee_start_order <orderid> <employeeid>
+employee_create_ins <orderid> <employeeid>
+employee_set_ins_status <orderid> <employeeid>
+employee_set_ins_temp <orderid> <employeeid>
+employee_finish_order <orderid> <employeeid>
+insert command
+see_all_orders
+ID:0; customerId: 0; action: CONNECT; service:Internet50; instanceId: notfound; status: NOT_STARTED
+insert command
+employee_start_order 0 1
+insert command
+employee_create_ins 0 1
+insert command
+
+Invalid command name!
+insert command
+see_all_orders
+ID:0; customerId: 0; employeeId: 1; action: CONNECT; service:Internet50; instanceId: notfound; status: IN_PROCESS
+insert command
+employee_finish_order 0 1
+insert command
+see_all_orders
+ID:0; customerId: 0; employeeId: 1; action: CONNECT; service:Internet50; instanceId: notfound; status: COMPLETE
+insert command
+exit
+
+
+
+
+Enter your ID: 0
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+1
+1) Internet50
+   Speed: 50, Limit: 10, Cost: 350; ID0; Date of start: Mon Nov 30 18:44:41 SAMT 2015; Service status: ACTIVE
+Client: Roman Khrapko. Balance 0.0 rub
+1 - Change status of service
+2 - Change service
+3 - Back
+1
+
+
+
+
+Choice service:
+1) Name: Internet50; Speed: 50; Limit: 10; Cost: 350; Status: ACTIVE; Conn.Date: Mon Nov 30 18:44:41 SAMT 2015
+1
+Choice action:
+1 - Suspend service
+2 - Restart service
+3 - Stop service
+4 - Back
+1
+Request sent to review
+1) Internet50
+   Speed: 50, Limit: 10, Cost: 350; ID0; Date of start: Mon Nov 30 18:44:41 SAMT 2015; Service status: ACTIVE
+Client: Roman Khrapko. Balance 0.0 rub
+1 - Change status of service
+2 - Change service
+3 - Back
+3
+
+
+
+
+Client: Roman Khrapko. Balance 0.0 rub
+1 - My services
+2 - View templates of services
+3 - Connect new service
+4 - Exit
+4
+
+
+
+
+Enter your ID: 1
+Employee: Roman Khrapko
+insert command
+see_all_orders
+ID:0; customerId: 0; employeeId: 1; action: CONNECT; service:Internet50; instanceId: notfound; status: COMPLETE
+ID:1; customerId: 0; action: SUSPEND; service:Internet50; instanceId: 0; statusNOT_STARTED
+insert command
+
+Invalid command name!
+insert command
+
+*/

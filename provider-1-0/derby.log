@@ -1,0 +1,69 @@
+Fri Apr 22 13:06:20 SAMT 2016 Thread[main,5,main] Cleanup action starting
+java.sql.SQLException: База данных 'providerdb' не найдена.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+Caused by: ERROR XJ004: База данных 'providerdb' не найдена.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 22 more
+============= begin nested exception, level (1) ===========
+ERROR XJ004: База данных 'providerdb' не найдена.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.apache.derby.impl.tools.ij.ij.dynamicConnection(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ConnectStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.ij.ijStatement(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.runScriptGuts(Unknown Source)
+	at org.apache.derby.impl.tools.ij.utilMain.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.go(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.mainCore(Unknown Source)
+	at org.apache.derby.impl.tools.ij.Main.main(Unknown Source)
+	at org.apache.derby.tools.ij.main(Unknown Source)
+============= end nested exception, level (1) ===========
+Cleanup action completed
+----------------------------------------------------------------
+Fri Apr 22 13:06:27 SAMT 2016:
+ Производится загрузка Derby версии The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): экземпляр a816c00e-0154-3d38-4ad9-000004a98020
+в каталоге базы данных C:\Users\008\IdeaProjects\provider-2-0\org.ourgroup.provider-2-0\firstdb sun.misc.Launcher$AppClassLoader@66d3c617 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_77-b03
+user.dir=C:\Users\008\IdeaProjects\provider-2-0\org.ourgroup.provider-2-0
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Запущен загрузчик классов базы данных - derby.database.classpath=''

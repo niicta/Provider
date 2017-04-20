@@ -1,0 +1,98 @@
+            table {
+			width: 100%;
+			}
+
+.table1{
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 30;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    min-width: 770px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.activeLabel {
+    color: #009A38;
+}
+
+.field1 {
+    background-color: rgba(0,0,0,0.3);
+    color: #FFF;
+}
+			.notebook2 {
+            position: relative;
+			}
+
+			.notebook2 > input {
+            display: none;
+			}
+
+			.notebook2 > div {
+            position: absolute;
+            box-sizing: border-box;
+            top: 30px;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            border-radius: 10px;
+            padding: 0px 1em;
+
+            z-index: 0;
+            background-color: #888;
+
+            transition: all 0.3s ease 0s, z-index 0s 0.3s;
+			}
+
+			.notebook2 > div > *:first-child {
+                display: block;
+                position: absolute;
+                box-sizing: border-box;
+                top: -30px;
+                width: 150px;
+                height: 30px;
+                font-family: Arial;
+                /*font-size: 13px;*/
+                border-radius: 7px 7px 7px 7px;
+                /*background-color: inherit;*/
+                color: #fff;
+                line-height: 28px;
+                cursor: pointer;
+                text-align: center;
+                transition: all 0.3s ease 0s;
+			}
+
+			.notebook2 > div > *:not(:first-child) {
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+			}
+
+			.notebook2 > div:nth-of-type(1) > *:first-child { left: 20px; }
+			.notebook2 > div:nth-of-type(2) > *:first-child { left: 175px; }
+			.notebook2 > div:nth-of-type(3) > *:first-child { left: 330px; }
+			.notebook2 > div:nth-of-type(4) > *:first-child { left: 485px; }
+
+			.notebook2 > input:nth-of-type(1):checked ~ div:nth-of-type(1),
+			.notebook2 > input:nth-of-type(2):checked ~ div:nth-of-type(2),
+			.notebook2 > input:nth-of-type(3):checked ~ div:nth-of-type(3),
+			.notebook2 > input:nth-of-type(4):checked ~ div:nth-of-type(4) {
+            z-index: 10;
+            transition: all 0.3s ease 0.3s;
+			}
+
+			.notebook2 > input:nth-of-type(1):checked ~ div:nth-of-type(1) > *:first-child,
+			.notebook2 > input:nth-of-type(2):checked ~ div:nth-of-type(2) > *:first-child,
+			.notebook2 > input:nth-of-type(3):checked ~ div:nth-of-type(3) > *:first-child,
+			.notebook2 > input:nth-of-type(4):checked ~ div:nth-of-type(4) > *:first-child {
+            color: #333;
+            transition: all 0.3s ease 0.3s;
+			}
+
+			.notebook2 > input:nth-of-type(1):checked ~ div:nth-of-type(1) > *:not(:first-child),
+			.notebook2 > input:nth-of-type(2):checked ~ div:nth-of-type(2) > *:not(:first-child),
+			.notebook2 > input:nth-of-type(3):checked ~ div:nth-of-type(3) > *:not(:first-child),
+			.notebook2 > input:nth-of-type(4):checked ~ div:nth-of-type(4) > *:not(:first-child) {
+            opacity: 1;
+            transition: all 0.3s ease 0.3s;
+			}

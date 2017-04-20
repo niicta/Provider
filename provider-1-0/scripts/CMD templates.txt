@@ -1,0 +1,6 @@
+java -Duser.language=en -Dderby.drda.debug=true -jar "%DERBY_HOME%/lib/derbyrun.jar" server start 		// Запуск сервера derby
+
+java -Duser.language=en -Dderby.drda.debug=true -jar "%DERBY_HOME%/lib/derbyrun.jar" ij 				// Запуск клиента derby
+
+connect 'jdbc:derby://localhost:1527/providerdb;user=admin;create=true';  								// Подключение из ij(клиент derby) под схемой таблиц Админа
+

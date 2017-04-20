@@ -1,0 +1,1 @@
+java -Djdbc.drivers=org.apache.derby.jdbc.ClientDriver org.apache.derby.tools.ij < create.sql
